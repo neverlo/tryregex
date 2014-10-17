@@ -339,7 +339,7 @@ define(['jquery', 'console', 'evaluate', 'globalFuncs'], function ($, regexConso
 				return false;
 			}
 
-			return $.isArray(output) && output[0] === '3+3';
+			return $.isArray(output) && output.length === 1 && output[0] === '3+3';
 		}
 	};
 
