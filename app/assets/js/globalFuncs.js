@@ -36,8 +36,7 @@ define(['jquery', 'require'], function ($, require) {
 	};
 
 	window.info = function () {
-		return 'Try Regex is an interactive regular expressions tutorial ' +
-			'written by Callum Macrae. Ask him for help!';
+		return '小试正则是一个交互式的正则表达式教程，由 Callum Macrae 编写，需要帮助的话可以请教他。';
 	};
 
 	window.previous = function () {

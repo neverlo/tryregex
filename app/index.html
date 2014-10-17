@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Try Regex—an interactive regex tutorial</title>
+	<title>小试正则—交互式的正则表达式教程</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="assets/js/bower/reset-css/reset.css">
 	<link rel="stylesheet" href="assets/build/style.css">
@@ -10,12 +10,12 @@
 </head>
 <body>
 	<header>
-		<h1>Try Regex</h1>
+		<h1>小试正则</h1>
 	</header>
 
 	<div class="main">
 		<div class="console">
-			<p class="info">Type some JavaScript here:</p>
+			<p class="info">在这里输入一些 JavaScript：</p>
 			<ul>
 				<li class="input-container"><label>
 					<span class="prompt">&gt; </span>
@@ -26,78 +26,78 @@
 
 		<div class="tutorial">
 			<div class="lesson lesson1">
-				<h2>Getting started with regex</h2>
-				<p>This interactive tutorial serves as an introduction to regular expressions, specifically regular expressions in JavaScript. This will still teach you to write regular expressions that work in other languages, but you should be aware that there are differences.</p>
-				<p>The console to the left is just a JavaScript console. Tell us your name using <code>setName('Your name')</code> (substituting your name in) to get started with the tutorial.</p>
-				<p>There are a number of useful commands: run <code>help()</code> to view them.</p>
+				<h2>开始使用正则表达式</h2>
+				<p>这是一个介绍正则表达式的交互教程，特别是 JavaScript 中的正则表达式。但仍然会教你编写可以在其他语言运行的正则表达式，不过你需要注意它们的不同之处。</p>
+				<p>左边是一个 JavaScript 控制台。 使用 <code>setName('Your name')</code> 告诉我们你的名字 （<code>Your name</code> 替换为你的名字）然后开始这个教程吧。</p>
+				<p>一些有用的命令：运行 <code>help()</code> 可以查看它们。</p>
 			</div>
 
 			<div class="lesson lesson2">
-				<h2>What are regular expressions?</h2>
-				<p>A regular expression (also known as a regex or a regexp) is a string for describing a search pattern—similar to asterisks for wildcard file name matching, but more powerful (and thus more complicated).</p>
-				<p>We'll start with a very basic example so that you can get the hang of the syntax and regular expressions in JavaScript.</p>
-				<p>The <code>bio</code> variable contains a string which may or may not contain your name. To see if it does, type <code>bio.match(/{{ firstEscaped }}/);</code></p>
+				<h2>正则表达式是什么？</h2>
+				<p>正则表达式是一个表示搜索模式的字符串（也称为正则），类似星号用于通配符文件名匹配，但是功能更强大（也因此更复杂）。</p>
+				<p>我们将从一个非常基础的例子开始，这样你将掌握正则表达式的语法以及在 JavaScript 中的使用技巧。</p>
+				<p><code>bio</code> 变量是一个可能包含你名字的字符串。输入 <code>bio.match(/{{ firstEscaped }}/)</code> 查看它是否包含了你的名字。</p>
 			</div>
 
 			<div class="lesson lesson3">
 				<p>It does!</p>
-				<p>There are a couple things that you can get from the previous example. The first is the syntax used to define regular expressions: you simply surround your expression in forward slashes:</p>
+				<p>你可以从前面的例子里得知两件事情。第一个是定义正则表达式的语法：简单的将你的表达式包含在一对正斜杠中。</p>
 
 				<pre><code>/your expression/</code></pre>
 
-				<p>If you type that into the console, you'll see that the regular expressions is returned.</p>
-				<p>The second is that you can use the <code>.match()</code> method to test an expression on a string. There are a couple other methods you can call: you can use the <code>.exec()</code> method directly on the regex to execute a string on a regex. Type <code>/{{ firstEscaped }}/.exec(bio)</code>.</p>
+				<p>如果你将它输入在控制台里，你会看到被返回的正则表达式。</p>
+				<p>第二个是你可以使用字符串的 <code>.match()</code> 方法去测试一个表达式。还有一些其他的方法可以调用：例如你可以使用正则表达式的 <code>.exec()</code> 方法去检测字符串。输入 <code>/{{ firstEscaped }}/.exec(bio)</code>。</p>
 			</div>
 
 			<div class="lesson lesson4">
-				<h2>Simple testing</h2>
-				<p>The <code>.exec()</code> method does the same thing as the <code>.match()</code> function, but is called on the expression instead of the string—this can be pretty useful.</p>
-				<p>Another method you can use—and probably the simplest of them all—is the <code>.test()</code> method. It is similar to <code>.exec()</code>, but returns a boolean value. Try it out!</p>
-				<p>Helpful hint: you can use the up arrow on your keyboard to go back to a previous expression.</p>
+				<h2>简单的测试</h2>
+				<p><code>.exec()</code> 方法和 <code>.match()</code> 方法做同样的事情，但由正则表达式自身去调用。这是非常有用的。</p>
+				<p>另一个你可以使用的方法，可能也是所有方法中最简单的一个，<code>.test()</code> 方法。 它有点类似 <code>.exec()</code>，但返回的是一个布尔值。试试吧！</p>
+				<p>有用的提示：你可以使用键盘的向上箭头来返回之前的表达式。</p>
 			</div>
 
 			<div class="lesson lesson5">
-				<h2>String replacements</h2>
-				<p>The final method we'll be using is the <code>.replace()</code> method of a string to replace a bit of a string with another string. Type the following to hide your name from the <code>bio</code> var:</p>
+				<h2>字符串替换</h2>
+				<p>最后一个我们会使用的方法是  <code>.replace()</code> ，它是一个字符串替换一些字符为另一些字符的方法。输入以下的命令将你的名字从 <code>bio</code> 变量中隐藏：</p>
 				<pre><code>bio.replace(/{{ firstEscaped }}/, '[redacted]')</code></pre>
 			</div>
 
 			<div class="lesson lesson6">
-				<h2>Special characters</h2>
-				<p>None of the expressions we have used so far have been especially interesting, and haven't contained any special characters. The following characters need escaping in regular expressions:</p>
+				<h2>特殊字符</h2>
+				<p>目前为止，我们使用的表达式都不是很有趣，它们都没有包含任何特殊字符。下面的字符在正则表达式中需要转义：</p>
 				<pre><code>$()*+.?[^|]</code></pre>
-				<p>To escape them, use a backslash, eg <code>/what\?/</code>.</p>
-				<p>Write an expression to see if the <code>num</code> variable contains the string "3.5".</p>
+				<p>使用一个反斜杠去转义， 例如 <code>/what\?/</code>。</p>
+				<p>写一个正则表达式查看 <code>num</code> 变量是否包含字符串 "3.5"。</p>
 			</div>
 
 			<div class="lesson lesson7">
-				<h2>The dot operator</h2>
-				<p>It doesn't! <code>num</code> equalled 123456, and so didn't contain the string "3.5".</p>
-				<p>The dot character has a special meaning in regular expressions: it matches any single character except for new line characters (so <code>/a.c/</code> would match "abc", "a c", "a$c", etc). Using <code>/3.5/</code> without escaping the dot <em>would</em> match the string stored in the <code>num</code>, as the dot operator would match the 4.</p>
-				<p>Try it out.</p>
+				<h2>点操作符</h2>
+				<p>It doesn't! <code>num</code> 等于 123456，所以它没有包含字符串 "3.5"。</p>
+				<p>在正则表达式中，点号有一个特殊的含义： 它匹配除了换行符外的任何单一字符 （所以 <code>/a.c/</code> 会匹配 "abc"，"a c"，"a$c" 等等)。 使用 <code>/3.5/</code> （没有转义点号） <em>会</em> 匹配存储在 <code>num</code> 中的字符串， 点号会匹配 "4"。</p>
+				<p>试试吧</p>
 			</div>
 
 			<div class="lesson lesson8">
-				<h2>Quantifiers</h2>
-				<p>There are a number of "quantifiers" that you can use to say how many times something should be matched. The first one is the question mark, which makes the previous token in the expression (the previous character or group of characters) optional.</p>
-				<p>The expression <code>/regexp?/</code> will match both "regex" and "regexp", as the question mark makes the p (but only the p) optional.</p>
-				<p>Write an expression that will match both "frontend" and "front-end", and give it as an argument to the <code>answer()</code> function (eg <code>answer(/your expression/)</code>).</p>
+				<h2>量词</h2>
+				<p>有一些“量词”，你可以用来指明某些字符应该匹配多少次。第一个是问号，在表达式中，它令前面的符号（前一字符或字符组）为可选的。</p>
+				<p>表达式 <code>/regexp?/</code> 会匹配 "regex" 和 "regexp"， 因为问号使得 P（但只有P）为可选的。</p>
+				<p>编写一个同时匹配 "frontend" 和 "front-end" 的表达式, 然后将其当做参数传递给 <code>answer()</code> 函数（例如 <code>answer(/your expression/)</code>）。</p>
 			</div>
 
 			<div class="lesson lesson9">
-				<h2>The plus sign</h2>
-				<p>The next quantifier we'll be looking at is the plus sign. It means "one or more of the previous token"; <code>/Princes+/</code> will match "Princes", "Princess", "Princesssss", etc. It will not, however, match "Prince".</p>
-				<p>The next expression you need to write is a little trickier. Write a regular expression which extracts everything between the opening and closing parentheses of the <code>shortStory</code> variable (note that you can view the contents of the variable just by typing <code>shortStory</code>). Hint: you'll need the previously mentioned dot operator.</p>
+				<h2>加号</h2>
+				<p>接下来的量词，我们将看到的是加号。它的意思是“一个或多个先前标记的”； <code>/Princes+/</code> 会匹配 "Princes"， "Princess"， "Princesssss" 等等。 但它不会匹配 "Prince"。</p>
+				<p>现在来编写一个有点复杂的表达式。编写一个正则表达式从 <code>shortStory</code> （你可以通过输入 <code>shortStory</code> 查看变量的内容）变量提取开闭括号之间的内容。提示：你需要前面提到的点操作符。</p>
 			</div>
 
 			<div class="lesson lesson10">
-				<h2>The asterisk</h2>
-				<p>Similar to the plus sign is the asterisk; but instead of meaning "one or more", the asterisk means "zero or more" of the previous token. <code>/Princes*/</code>, in addition to matching all the examples from <code>/Princes+/</code>, would also match "Prince".</p>
-				<p>Repeat the previous example, but using the asterisk instead of the plus sign. Extract everything from the <code>shortStory</code> variable between the opening and closing parentheses, even if there is nothing there.</p>
+				<h2>星号</h2>
+				<p>星号和加号有点类似；但不同于加号意味着“一个或多个”，星号的意思是“零个或多个”前面的标记。<code>/Princes*/</code>，除了会匹配由 <code>/Princes+/</code> 匹配到的例子，同时也会匹配 "Prince"。</p>
+				<p>重复上一个例子，但是用星号代替加号。从 <code>shortStory</code> 变量提取括号之间所有的内容，即使有可能内容为空。</p>
 			</div>
 
 			<div class="lesson lesson11">
-				<h2>Limited repetition</h2>
+				<h2>有限重复</h2>
 				<p>There is one final quantifier that you can use which allows you to limit repetition. The syntax is <code>{min,max}</code> which min is the minimum number of repetitions and max the maximum. For example, <code>/a{3,5}/</code> would match "aaa", "aaaa" and "aaaaa", but nothing else.</p>
 				<p>Write an expression to match the text between an opening and closing parenthesis in the <code>bracketNumbers</code> variable—but only if the contents are between 5 and 8 characters long.</p>
 			</div>
@@ -244,10 +244,10 @@ text.replace(/\*([^*]+)\*/, replace);</code></pre>
 	</div>
 
 	<footer>
-		<p>Site by <a href="http://macr.ae/">Callum Macrae</a>. <small>Copyright &copy; 2014</small></p>
+		<p>Site by <a href="http://macr.ae/">Callum Macrae</a>. Translated by <a href="http://etsblog.com/">e_t</a>. <small>Copyright &copy; 2014</small></p>
 	</footer>
 
-	<a class="gh-ribbon" href="https://github.com/callumacrae/tryregex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+	<a class="gh-ribbon" href="https://github.com/ethrea1/tryregex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
 	<!-- This div is always hidden; it's for cloning from -->
 	<div class="hidden-storage">
