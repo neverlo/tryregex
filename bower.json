@@ -6,6 +6,6 @@
   "dependencies": {
     "reset-css": "latest",
     "jquery": "1.10.2",
-	  "requirejs": "~2.1.9"
+    "requirejs": "~2.1.9"
   }
 }
